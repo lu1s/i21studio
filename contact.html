@@ -1,0 +1,329 @@
+<!doctype html>
+<html lant="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>i21 Studio</title>
+	<link href='http://fonts.googleapis.com/css?family=Karla:400,700' rel='stylesheet' type='text/css'></head>
+	<link rel="stylesheet/less" type="text/css" href="css/styles.less" />
+	<link rel="stylesheet" type="text/css" href="galleria/galleria.classic.css" />
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41124738-1', 'i21studio.com');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+	<div class="bar">
+		<div class="logo-wrp"><a href="index.html" class="logo"><img src="img/logo-large.png" alt="i21 Studio"/></a></div>
+		<div class="menu-wrp">
+			<a href="contact.html">contact</a>
+		</div>	
+	</div>
+	<div class="chill">
+		<p>We are professional architects with expertise in 3D modeling, rendering and 2D special presentations.</p>
+	</div>
+	<div class="selector">
+		<div class="contact">
+			<p>Please provide detailed information. If you want to schedule a meeting let us know the best time to contact you.</p>
+			<form id="contact-form">
+				<input type="email" name="email" placeholder="email"/>
+				<textarea placeholder="message"></textarea>
+				<div class="validator"></div>
+				<button id="submit-button">submit</button>
+			</form>
+		</div>
+	</div>
+	<div class="gallery-wrp">
+		<div id="galleria">
+			<img src="img/photos/1.jpg" data-title="Outside lighting and environment" data-description="Realistic render at 960x460"/>
+			<img src="img/photos/2.jpg" data-title="Interior design with metal surfaces" data-description="Photo-realistic render"/>
+			<img src="img/photos/3.jpg" data-title="Conceptual sketch of museum" data-description="Creative services with free sketches for presentations" />
+			<img src="img/photos/4.jpg" data-title="Interior design of clean, white surfaces furniture" data-description="Realistic render" />
+			<img src="img/photos/5.jpg" data-title="Conceptual shell for building" data-description="Conceptual render" />
+			<img src="img/photos/6.jpg" data-title="Lighting and texture touches" data-description="Photo-realistic renderings with 3d and 2d retouches" />
+			<img src="img/photos/7.jpg" data-title="Lighting and texture touches" data-description="Photo-realistic renderings with 3d and 2d retouches" />
+			<img src="img/photos/8.jpg" data-title="Space distribution and mind-oriented design" data-description="Our unique angles let the designers rethink and re-engineer" />
+			<img src="img/photos/9.jpg" data-title="Space distribution and mind-oriented design" data-description="Our unique angles let the designers rethink and re-engineer" />
+			<img src="img/photos/10.jpg" data-title="Realistic views before building it" data-description="The sells don't need to wait until the house is built"/>
+			<img src="img/photos/11.jpg" data-title="Realistic views before building it" data-description="The sells don't need to wait until the house is built"/>
+			<img src="img/photos/12.jpg" data-title="Open spaces with green areas" data-description="Conceptual render"/>
+			<img src="img/photos/13.jpg" data-title="Open spaces with green areas" data-description="Conceptual render"/>
+			<img src="img/photos/14.jpg" data-title="Virtual tours inside the building" data-description="The whole 3D model lets you select the exact angle to render" />
+			<img src="img/photos/15.jpg" data-title="Virtual tours inside the building" data-description="The whole 3D model lets you select the exact angle to render" />
+			<img src="img/photos/16.jpg" data-title="Virtual tours inside the building" data-description="The whole 3D model lets you select the exact angle to render" />
+		</div>
+	</div>
+	<footer>
+		&copy;<span id="copyright-year"></span><script type="text/javascript">function year(){ var x = new Date().getFullYear(); var element = document.getElementById("copyright-year"); element.innerHTML = x; }; year();</script> i21 Studio. Todos los derechos reservados.<br/>Ramón López Velarde 5812-5.<br/>Hipódromo Dos, 22125. Tijuana, B.C. México.<br/>(664)608-0504.
+	</footer>	
+	<div class="overlay">
+		<div class="overlay-bar"><div class="overlay-close">[x]</div></div>
+	</div>
+	<div class="overlay-content"></div>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="galleria/galleria-1.2.9.min.js"></script>
+	<script type="text/javascript" src="js/lessorg.js"></script>
+	<script type="text/htmlscript" id="3d-overlay-content">/*
+			<div class="cotizador-2d">
+				<p>Enter your plot requirements to know an estimate price before discounts.</p>
+				<div class="input-box width">
+					<label for="width">width (px)</label>
+					<input type="number" name="width" value="1024" />
+					<span class="validator" for="width" />
+				</div>
+				<div class="input-box height">
+					<label for="height">height (px)</label>
+					<input type="number" name="height" value="768" />
+					<span class="validator" for="height" />
+				</div>
+				<div class="input-box quality">
+					<label for="quality">quality</label>
+					<select name="quality">
+						<option value="0">Conceptual</option>
+						<option value="1" selected="selected">Realist</option>
+						<option value="2">Photo-realist</option>
+					</select>
+					<span class="validator" for="quality" />
+				</div>
+				<div class="input-box results">
+					<h2>Total: $<span class='price-number'></price></h2>
+					<p>This price is raw, before any member discount.</p>
+					<p>If you have any questions don't hesitate to <a href="contact" class="contact-link">contact us</a>.</p>
+				</div>
+			</div>
+	*/</script>
+	<script type="text/htmlscript" id="2d-overlay-content">/*
+			<div class="cotizador-2d">
+				<p>We have two options for now to enhance your presentations.</p>
+				<p>We are constantly improving to offer more presentation services.</p>
+				<div class="input-box">
+					<h3>Presentation sheet (double letter)</h3>
+					<h4>$35</h4>
+				</div>
+				<div class="input-box">
+					<h3>Logo design</h3>
+					<h4>$120</h4>
+				</div>
+			</div>
+	*/</script>
+	<script type="text/javascript">
+		var mxntousd = 0.08;
+		var rates = {
+			  conceptual: 0.000941403
+			, realist: 0.001882806
+			, photorealist: 0.002824209
+			, toUsd: function(num){
+				return num*mxntousd;
+			}
+		}
+		var locks = {
+			  click: false
+			, keyCode: false
+		}
+
+		function parseHtmlscript(source, target){
+			target.html('');
+			var dirtyHtml = source.html();
+			target.html(dirtyHtml.slice(2, dirtyHtml.length - 2).replace(/^\s+|\s+$/g, ""));
+		}
+		function overlay(turn){
+			if(turn){
+				locks.click = true;
+				locks.keyCode = true;
+				$('.overlay > .overlay-bar > .overlay-close').removeClass('attention');
+				$('.overlay').fadeIn(function(){
+					locks.click = false;
+					locks.keyCode = false;
+					$('.overlay-content').fadeIn();
+				});
+			}
+			else{
+				locks.click = true;
+				locks.keyCode = true;
+				$('.overlay-content').fadeOut(function(){
+					$('.overlay').fadeOut(function(){
+						locks.click = false;
+						locks.keyCode = false;
+					});
+				});
+			}
+		}
+		function formatCurrency(num) {
+    		num = isNaN(num) || num === '' || num === null ? 0.00 : num;
+    		return parseFloat(num).toFixed(2);
+		}	
+		function compute3d(){
+			var w = parseInt($('input[name="width"]').val());
+			var h = parseInt($('input[name="height"]').val());
+			var opt = parseInt($('select[name="quality"]').val());
+			if(typeof(w) != 'number' || typeof(h) != 'number' || typeof(opt) != 'number'){
+				return;
+			}
+			var mult = opt == 0 ? rates.conceptual : (opt == 1 ? rates.realist : rates.photorealist);
+			$('.price-number').text( formatCurrency( rates.toUsd( w * h * mult ) ) );
+		}
+		function launch3d(){
+			$('input[name="width"]').on('keyup change',function(){
+				compute3d();
+			});
+			$('input[name="height"]').on('keyup change',function(){
+				compute3d();
+			});
+			$('select[name="quality"]').on('change',function(){
+				compute3d();
+			});
+			compute3d();
+		}
+		function initScript(which){
+			switch(which){
+				case '2d':
+
+				break;
+				case '3d':
+					launch3d();
+				break;
+			}
+		}
+		$(document).ready(function(){
+			$('.button').on('mouseenter',function(){
+				if(locks.click)
+					return;
+				$(this).stop().animate({backgroundColor:'#E36E07'},200);
+			}).on('mouseleave',function(){
+				$(this).stop().animate({backgroundColor:'#FA7D10'},200);
+			}).on('click',function(){
+				if(locks.click)
+					return;
+				locks.click = true;
+				var opt = $(this).hasClass('3d') ? '3d' : ($(this).hasClass('2d') ? '2d' : false);
+				if(!opt || opt === false)
+					return;
+				if(opt == '2d'){
+					if(!$(this).hasClass('selected')){
+						parseHtmlscript($('#2d-overlay-content'), $('.overlay-content'));
+						overlay(true);
+						$(this).addClass('selected');
+					}
+					else{
+						overlay();
+						$(this).removeClass('selected');
+					}
+				}
+				else{
+					if(!$(this).hasClass('selected')){
+						parseHtmlscript($('#3d-overlay-content'), $('.overlay-content'));
+						initScript('3d');
+						overlay(true);
+						$(this).addClass('selected');
+					}
+					else{
+						overlay();
+						$(this).removeClass('selected');
+					}
+				}
+			});
+			$(window).on('keydown',function(e){
+				if(locks.keyCode)
+					return;
+				if(e.keyCode === 27){
+					locks.keyCode = true;
+					$('button').removeClass('selected');
+					overlay();
+				}
+			});
+			$('.overlay > .overlay-bar > .overlay-close').on('click',function(){
+				if(locks.click)
+					return;
+				$('.button').removeClass('selected');
+				$(this).removeClass('attention');
+				overlay();
+			});
+			$('.overlay').on('click',function(){
+				$('.overlay > .overlay-bar > .overlay-close').addClass('attention');
+			});
+		    // Load the classic theme
+		    Galleria.loadTheme('galleria/galleria.classic.min.js');
+
+	    	Galleria.configure({
+	    		  transition: 'pulse'
+	    		, thumbCrop: true
+	    		, imageCrop: true
+	    		, carousel: false
+	    		, imagePan: true
+	    		, clicknext: true
+	    		, responsive: true
+	    		, showInfo: true
+	    	})
+
+		    // Initialize Galleria
+		    Galleria.run('#galleria');
+		    $('#submit-button').on('click',function(e){
+		    	e.preventDefault();
+		    	$(this).text('sending...');
+		    	$(this).attr('disabled','disabled');
+	    		processForm();
+	    		$(this).removeAttr('disabled');
+	    		$(this).text('submit');
+
+		    })
+		});
+		function validateForm(){
+			var form = $('#contact-form');
+			var emailRegex = new RegExp(/^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,15})$/);
+			var email = form.find('input[name="email"]').first().val();
+			var message = form.find('textarea').first().val();
+			if(!emailRegex.test(email))
+				return [false,'The e-mail is invalid.'];
+			if(message === '')
+				return [false,'Please write something to us.'];
+			return true;
+		}
+		var to;
+		function processForm(){
+			var test = validateForm();
+			if(!test[0]){
+				$('.validator').text(test[1]).show();
+				$('input, textarea').on('focusin',function(){
+					$('.validator').text('').hide();
+				});
+			}
+			var form = $('#contact-form');
+			var url = 'http://www.i21studio.com/v2/contact/send';
+			var data = {
+				  email: form.find('input[name="email"]').first().val()
+				, message: form.find('textarea').first().val()
+			};
+			$.post(url, data, function(d){
+				if(d.success){
+					$('input, textarea').val('');
+					$('.validator').addClass('success').text('Thanks.').fadeIn(function(){
+						window.clearTimeout(to);
+						to = window.setTimeout(function(){
+							$('.validator').fadeOut(function(){
+								$('.validator').text('').removeClass('success');
+							});
+						},3000);
+					});
+				}
+				else{
+					$('.validator').addClass('error').text(d.message).fadeIn(function(){
+						$('input').on('focusin',function(){
+							$('.validator').fadeOut(function(){
+								$('.validator').text('').removeClass('error');
+							});
+						});
+					});
+				}
+			});
+		}
+	</script>
+</body>
+</html>

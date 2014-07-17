@@ -1,0 +1,72 @@
+﻿@media only screen and (max-width: 767px) {
+  .root-row:last-child .mobile-divider:last-child {
+    border-bottom: 1px dotted #b2b2b2;
+  }
+  .mobile-full-width {
+    width: 100%!important;
+    margin-left: 0!important;
+  }
+  .mobile-full-width.no-outside-border:first-child {
+    border-top: none!important;
+  }
+  .mobile-full-width.no-outside-border:last-child {
+    border-bottom: none!important;
+  }
+  .mobile-full-width.mobile-divider {
+    border-top: 1px dotted #b2b2b2;
+    padding: 20px 0;
+  }
+  .mobile-full-width.mobile-divider.divider-compact {
+    padding: 10px 0;
+  }
+  .mobile-full-width.mobile-divider.divider-nopadding {
+    padding: 0;
+  }
+  .mobile-full-width.mobile-divider .row-fluid:first-child.no-outside-border:first-child {
+    border-top: none!important;
+  }
+  .mobile-full-width.mobile-divider .row-fluid:last-child.no-outside-border:last-child {
+    border-bottom: none!important;
+  }
+  .mobile-full-width.margin-vertical {
+    margin: .75% 0;
+  }
+  .mobile-center-text {
+    text-align: center;
+    margin-left: 0!important;
+  }
+  .mobile-full-width-non-obstrusive {
+    width: 100%;
+    margin-left: 0;
+  }
+  .mobile-full-width-non-obstrusive.margin-vertical {
+    margin: .75% 0;
+  }
+  .mobile-side-margins {
+    width: 88%!important;
+    margin-left: 6%!important;
+  }
+  .root-row.pad-row {
+    width: 92%;
+    padding: 0 4%;
+  }
+  .disable-mobile-offset[class*="offset"] {
+    margin-left: 0!important;
+  }
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .mobile-half-width {
+    margin-left: 0!important;
+    width: 50%!important;
+  }
+  .mobile-three-quarter-width {
+    margin-left: 10px!important;
+    width: 75%!important;
+  }
+  .mobile-one-third-width {
+    margin-left: 0!important;
+    width: 33%!important;
+  }
+}
